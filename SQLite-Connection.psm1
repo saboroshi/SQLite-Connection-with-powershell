@@ -1,13 +1,21 @@
-﻿<#	
-	===========================================================================
-	 Created with: 	SAPIEN Technologies, Inc., PowerShell Studio 2021 v5.8.196
-	 Created on:   	2022. 10. 03. 22:02
-	 Created by:   	Cservenyi Szabolcs
-	 Organization: 	
-	 Filename:     	SQLite-Connection.psm1
-	-------------------------------------------------------------------------
-	 Module Name: SQLite-Connection
-	===========================================================================
+<#
+    .Synopsis
+     Connect to SQLite database.
+
+    .Description
+     The module helps you connect to a SQLite database and run arbitrary queries.
+     To use it, you need the System.Data.SQLite.dll file, which contains the .NET objects.
+
+     http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki
+
+    .Parameter DLLPath
+     The path to the System.Data.SQLite.dll file.
+  
+     .Parameter DBfile
+     The path to the SQLite database file.
+
+    .Example
+     SQLite-Connection -DLLPath "C:\SQLite\System.Data.SQLite.dll" -DBfile "C:\SQLite\SQLite.db" -Query "SELECT * FROM <Table>"
 #>
 
 function SQLite-Connection
@@ -31,7 +39,7 @@ function SQLite-Connection
 	$Connection.Close()
 }
 
-Export-ModuleMember SQLite-Connection
+# Export-ModuleMember SQLite-Connection
 
 
 
