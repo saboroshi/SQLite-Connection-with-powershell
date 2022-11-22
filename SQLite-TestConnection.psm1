@@ -1,13 +1,21 @@
-﻿<#	
-	===========================================================================
-	 Created with: 	SAPIEN Technologies, Inc., PowerShell Studio 2021 v5.8.196
-	 Created on:   	2022. 10. 03. 22:10
-	 Created by:   	Cservenyi Szabolcs
-	 Organization: 	
-	 Filename:     	SQLite-TestConnection.psm1
-	-------------------------------------------------------------------------
-	 Module Name: 	SQLite-TestConnection
-	===========================================================================
+<#
+       .Synopsis
+        Connect to SQLite database.
+	
+       .Description
+        The module helps to test connection to SQLite database.
+        To use it, you need the file System.Data.SQLite.dll, which contains the .NET objects.
+        The necessary files can be downloaded from http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki.
+        Make sure you are using the same version as the .NET version that came pre-installed on your computer.
+	
+       .DLLPath parameter
+        The path to the System.Data.SQLite.dll file.
+  
+        .Parameter DBfile
+        The path to the SQLite database file.
+	
+       .Example
+        SQLite-Connection -DLLPath "C:\SQLite\System.Data.SQLite.dll" -DBfile "C:\SQLite\SQLite.db"
 #>
 
 function SQLite-TestConnection
@@ -15,7 +23,6 @@ function SQLite-TestConnection
 	param (
 		$DLLPath = "",
 		$DBfile = "",
-		$Query = ""
 	)
 	$ErrorActionPreference = 'Stop'
 	try
@@ -35,7 +42,7 @@ function SQLite-TestConnection
 	}
 }
 
-Export-ModuleMember SQLite-TestConnection
+# Export-ModuleMember SQLite-TestConnection
 
 
 
