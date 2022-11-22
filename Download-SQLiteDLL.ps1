@@ -1,4 +1,13 @@
-﻿#http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki
+﻿# http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki
+ 
+ <#
+    This function helps to download all the files belonging to the .NET framework of the System.Data.SQLite add-on, 
+    which can be found at http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki.
+
+    Parameters:
+    $Version = <Version of the files to be downloaded, e.g. "1.0.116.0">
+    $Path = <The location of the folder where we want to download the files>
+ #>
 
 function Download-SQLiteDLL
 {
