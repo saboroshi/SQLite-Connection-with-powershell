@@ -4,9 +4,9 @@
 
     .Description
      The module helps you connect to a SQLite database and run arbitrary queries.
-     To use it, you need the System.Data.SQLite.dll file, which contains the .NET objects.
-
-     http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki
+     To use it, you need the file System.Data.SQLite.dll, which contains the .NET objects. 
+     The necessary files can be downloaded from http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki. 
+     Make sure to use the same version as the .NET version pre-installed on your computer.
 
     .Parameter DLLPath
      The path to the System.Data.SQLite.dll file.
